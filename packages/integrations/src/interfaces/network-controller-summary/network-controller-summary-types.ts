@@ -1,6 +1,6 @@
 export interface NetworkControllerSummary {
   wanStatus: "enabled" | "disabled";
-
+  alerts: number;
   www: {
     status: "enabled" | "disabled";
     latency: number;
@@ -10,12 +10,14 @@ export interface NetworkControllerSummary {
 
   wifi: {
     status: "enabled" | "disabled";
+    accessPoints: number;
     users: number;
     guests: number;
   };
 
   lan: {
     status: "enabled" | "disabled";
+    switches: number;
     users: number;
     guests: number;
   };
